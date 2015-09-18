@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <title>State of Retirement Report Card</title>
+
+  <!-- Libraries -->
+  <script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/vendor/raphael-min.js"></script>
+  <script type="text/javascript" src="js/vendor/highcharts.js"></script>
+
+  <!-- Urban produced scripts -->
+  <script type="text/javascript" src="js/box-graph_1407944838.js"></script>
+  <script type="text/javascript" src="js/code_1407944838.js"></script>
+  <script type="text/javascript" src="js/text_description_logic_1407944838.js"></script>    
+  <script type="text/javascript" src="js/table_1407944838.js"></script>
+  <script type="text/javascript" src="js/natcharts_1407944838.js"></script>
+
+  <!-- Pension Data  -->
+  <script type="text/javascript" src="js/slerp_data.js"></script>
+  <script type="text/javascript" src="js/slerp_state_level_aggregates.js"></script>
+  <script type="text/javascript" src="js/slerp_plan_level_aggregates.js"></script>
+
+
+  <!-- Map path coordinates -->
+  <script type="text/javascript" src="js/mapobject_1407944838.js"></script>
+
+  <!-- All Functions called here on DOM load -->
+  <script type="text/javascript" src="js/main_1407944838.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="css/main_1407944838.css" />
+</head>
+<body>
+  <div id="content">
+  <a href="http://www.urban.org/retirement_policy/" target="_self"><img id="header" src="img/pensionsHeader.jpg" style="margin:-10px; margin-bottom:10px;"/></a>
+    <h1 id="mainHeader"><a href="index.html">The State of Retirement: Grading America's Public Pension Plans</a></h1>
+    <table id="topTable">
+      <tr>
+        <td>
+          <div id="introText">
+          <p>
+            Our pension report card and interactive map grade state-administered retirement plans on their financing; how much retirement security they provide to short- and long-term employees; and the workforce incentives they create for younger, older, and mid-career employees. Results are based on the Urban Institute’s State and Local Employee Pension Plan (SLEPP) database, which includes detailed state-by-state information on plan rules for public school teachers, police officers and firefighters, and general state and local government employees. 
+          </p>
+          <p>
+            The database and report card were compiled by Richard Johnson, Barbara Butrica, Owen Haaga, Ben Southgate, and Eugene Steuerle. Tim Meko, Ben Southgate, and Graham MacDonald designed the interactive map. The Alfred P. Sloan Foundation provided financial support.
+          </p>
+          </div>
+        </td>
+        <td>
+          <ul id="introLinks">
+            <li><a href="methods.html">About Our Methods</a></li>
+            <li><a href="data.html">State and Local Employee Pension Plan Database</a></li>
+            <li><a href="#">Related Briefs</a>
+              <ul>
+                <li><a href="http://www.urban.org/publications/413106.html">When Do State and Local Pension Plans Encourage Workers to Retire?</a> </li>
+                <li><a href="http://www.urban.org/publications/413107.html">How Long Must State and Local Employees Work to Accumulate Pension Benefits?</a> </li>
+                <li><a href="http://www.urban.org/publications/413108.html">Do State and Local Pensions Lock In Mid-Career Employees?</a> </li>            
+              </ul>
+            </li>
+            <li><a href="http://www.urban.org/retirement_policy/pensionsproject.cfm" target="_blank">About the Public Pension Project</a></li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <div id="topFilters">
+      <div>
+        <h1>How the Plans Stack Up Nationally</h1>
+        <a class="buttons var selected" id="OVRL">Overall<br/> Grade</a>
+        <a class="buttons var" id="YGGD">Rewarding<br/> Younger Workers</a>
+        <a class="buttons var" id="DYGD">Promoting a <br/> Dynamic Workforce</a>
+        <a class="buttons var" id="OLGD">Encouraging Work<br/> at Older Ages</a>
+        <a class="buttons var" id="S1GD">Retirement Income<br/> for Short-Term Employees</a>
+        <a class="buttons var" id="S3GD">Retirement Income<br/> for Long-Term Employees</a>
+        <a class="buttons var" id="AGGD">Making Required<br/> Contributions</a>
+        <a class="buttons var" id="FDGD">Funding<br/> Ratio</a>            
+      </div>
+      <div>
+        <h1>Filter Plans by Occupation</h1>
+        <a class="buttons occ selected" id="X">All</a>
+        <a class="buttons occ" id="GS">General State Employees</a>
+        <a class="buttons occ" id="GL">General Local Employees</a>
+        <a class="buttons occ" id="TS">Teachers</a>
+        <a class="buttons occ" id="PF">Police and Fire</a>
+      </div>
+      <div>
+        <h1>Filter Plans by Hire Date</h1>
+        <a class="buttons hire selected" id="allHires">All</a>
+        <a class="buttons hire" id="newHires">Only New Hires</a>
+        <a class="buttons hire" id="oldHires">Excludes New Hires</a>
+      </div>
+    </div>
+    <div id="mapGraphMain">
+      <div id="mapHolder" class="left">
+        <div id="mapDiv"></div>
+        <div id="filterLegend">
+          <table id="filterTable">
+            <tr>
+              <td height="90px"><div id="dropDownExp" class="left fL">Select a state from the map or use the drop down menu for more information</div></td>
+              <td>
+                <div id="legend" class="left fL">
+                  <div id="keyTitle" class="keyLabel">
+                  <p id="planGrades">Plan Grades</p>
+                  </div>
+                  <img id="keyImage" src="img/regKey_na.png" >
+                  <p id="gradeCriteria" style="font-family:helvetica,arial,tahoma,verdana,sans-serif; font-size:11px">
+                    <i><a href="grading_criteria.pdf">View grading criteria (PDF)</a></i>
+                  </p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><div id="dropDown" class="left fL"><form><select id="stateSelect"></select></form></div></td>
+            </tr>               
+          </table>
+          <div class="clearLeft"></div>
+        </div>            
+      </div>
+      <div id="graphHolder" class="right">
+        <div id="boxDiv"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="displayFilter">
+      <table>
+        <tr>
+          <td>
+            <h1>Grade Distributions</h1>
+            <a class="tableButtons tableSelected" id="button-national">State-Level Grade Distribution</a>
+            <a class="tableButtons" id="button-plan">Plan-Level Grade Distribution</a>
+          </td>          
+          <td id="grade_table_buttons">  
+            <h1>Grade Tables</h1>
+            <a class="tableButtons" id="button-state">State Breakdown Table</a>
+            <a class="tableButtons" id="button-best_plans">Nationwide Best</a>    
+            <a class="tableButtons" id="button-worst_plans">Nationwide Worst</a>    
+          </td>
+        </tr>         
+      </table>
+    </div>
+    <div id="tableSection">
+      <div id="nationalTableDiv">
+        <div id="natChartHeader"></div>
+        <table id="natTable" width="900px" border=1 rules=cols frame=void bordercolor="#e0e0e0" style="border-collapse:collapse;">
+          <tr>
+            <td class="chartLabel">Overall Grade</td>
+            <td class="chartLabel">Rewarding Younger<br/>Workers</td>
+            <td class="chartLabel">Promoting a Dynamic<br/>Workforce</td>
+            <td class="chartLabel">Encouraging Work<br/>at Older Ages</td>
+          </tr>
+          <tr>
+            <td id="container1" style="width: 225px; height: 120px; margin: 0 auto"></td>
+            <td id="container2" style="width: 225px; height: 120px; margin: 0 auto"></td>
+            <td id="container3" style="width: 225px; height: 120px; margin: 0 auto"></td>
+            <td id="container4" style="width: 225px; height: 120px; margin: 0 auto"></td>
+          </tr>
+          <tr><td colspan="4">&nbsp;</td></tr>
+          <tr>
+            <td class="chartLabel">Providing Retirement Income<br/>to Short-Term Employees</td>
+            <td class="chartLabel">Providing Retirement Income<br/>to Long-Term Employees</td>
+            <td class="chartLabel">Making Required<br/>Contributions</td>
+            <td class="chartLabel">Funding Ratio</td>                    
+          </tr>
+          <tr>
+            <td id="container5" style="width: 225px; height: 120px; margin: 0 auto"></td>
+            <td id="container6" style="width: 225px; height: 120px; margin: 0 auto"></td>
+            <td id="container7" style="width: 225px; height: 120px; margin: 0 auto"></td>
+            <td id="container8" style="width: 225px; height: 120px; margin: 0 auto"></td>
+          </tr>
+        </table>
+      </div>
+      <table id="stateTableHeader">
+      </table>
+      <div id="stateTableDiv">
+        <table id="stateTable">
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="cs_control_864" class="cs_control CS_Element_LinkBar"><span class="CS_LinkBar_Item">© 2014 Urban Institute | 2100 M St NW | Washington, DC</span><span class="CS_LinkBar_Separator">&nbsp;|&nbsp;</span><a href="http://www.urban.org/about/contact.cfm" class="CS_LinkBar_Item">Contact Us</a><span class="CS_LinkBar_Separator">&nbsp;|&nbsp;</span><a href="http://www.urban.org/about/privacy.cfm" class="CS_LinkBar_Item">Privacy Policy</a><span class="CS_LinkBar_Separator">&nbsp;|&nbsp;</span><a href="http://www.urban.org/about/careers/index.cfm" class="CS_LinkBar_Item" >Careers</a></div>
+    </div>
+
+  </div> 
+  <!-- Leave this at the bottom of the page, The div with popup information, style in main.js in the boxGraph function call -->
+  <div id="popupDiv"></div>
+    <!-- Google Analytics tracking code -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-392952-4']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</body>
+</html>

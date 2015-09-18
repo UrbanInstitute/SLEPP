@@ -1,0 +1,79 @@
+
+body {font-family:"helvetica","arial","tahoma","verdana","sans-serif";}
+table {width:900px; border-collapse: collapse;}
+td {
+    text-align: left;
+}
+
+table#specs_table td.series_table_value, .spec_category_val  {
+    border-right-style:solid;
+    border-left-style:solid;
+    border-bottom-style:solid;
+    border-width:1px;
+    border-color: #999;
+    padding:0;
+}
+table#specs_table td.series_table_value {
+    width:100px;
+    text-align: right;
+}
+tr .sectionHeader {height:20px;}
+
+#top_header {
+    margin-top:20px; 
+    margin-bottom: 20px;
+    width:900px;
+}
+#citation {font-size: 8pt; font-style:italic;}
+#specs_table {
+    font-size: 8pt; 
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#spec_age_header, .spec_category_header {
+    font-weight: bold;
+    font-style: italic;
+    border-bottom-style:solid;
+    border-color: #000;
+    border-width: 1px;
+    padding-top:10px;
+}
+#header_table {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #888;
+    font-size:10pt;
+    margin-bottom: 10px;
+}
+#bottom_buttons {margin:20px;}
+
+.spec_age_row {font-weight: bold}
+.spec_category_val, .spec_age_row {font-style: italic;}
+.spec_category_col {width:200px;}
+.header_titles {width:200px;}
+.dlButton {margin-left:20px;}
+.interface_table {margin-bottom:10px;}
+.side_graph {height:250px; width:450px;}
+.planDetailRow {font-size:8pt;}
+.planDetailCategory {
+    font-weight:bold;
+    width:250px;
+    vertical-align: top;
+}
+.planDetailCategory, .planDetailValue {
+    padding-top:5px;
+    border-bottom-style: solid;
+    border-width:1px;
+    border-color: #bbbbbb;
+}
+.spec_category_val.maxvals {
+    font-weight: bold;
+}
+.spec_category_val.key_ages {
+    font-weight: bold;
+}
+
+.fade div {
+    opacity: 0.3;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!-- IE checker graciously taken from: http://stackoverflow.com/a/10965091/1718488 -->
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> 
+<html class=""> <!--<![endif]-->
+
+	<head>
+
+    	<!-- Vendor Scripts -->
+    	<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+	    <script type="text/javascript" src="js/vendor/highcharts.js"></script>
+
+	    <!-- Dataset -->
+	    <script type="text/javascript" src="js/slerp_data.js"></script>
+	    <script type="text/javascript" src="js/plan_weights_shelf_1407944838.js"></script>
+
+	   	<!-- Urban scripts and style sheets -->
+	   	<script type="text/javascript" src="js/ie_check_1407944838.js"></script>
+	   	<script type="text/javascript" src="js/grading_tool_1407944838.js"></script>
+    	<link type="text/css" rel="stylesheet" href="css/grading_tool_1407944838.css" />
+
+	</head>
+
+	<body class="hidden_start">
+		<h3>Grade: <span id="current_grade_text"></span></h3>
+		<table id="main">
+			<tr>
+				<td id="main_chart">
+					<div id="chart"></div>
+				</td>
+				<td>
+					<h4 id="control_title">Plan Variables</h4>
+					<table id="grade_controls"></table>
+				</td>
+			</tr>
+		</table>
+ 		<h4> Display: 
+			<span id="state" class="dist_select_button button">
+				State Distribution
+			</span>
+			<span id="plan" class="dist_select_button button selected_button">
+				Plan Distribution
+			</span> 
+			Format: 
+ 			<span id="per" class="num_format button"> 
+				Percent
+			</span>
+			<span id="num" class="num_format button selected_button"> 
+				Number 
+			</span>			
+		</h4>
+ 		<h4> Chart Grid: 
+			<span id="single" class="chart_number_select button">
+				Single Chart
+			</span>
+			<span id="all" class="chart_number_select button selected_button">
+				All Charts
+			</span>
+		</h4>		
+		<h3>Usage Instructions</h3>
+		<div id="note_div">
+			<ul>
+				<li>
+					To change the grading criteria for a given variable, click on the "(Change Criteria)" button beneath the variable, which will show the current intervals (or fixed value) used in calculating the grade.
+				</li>
+				<li>
+					Interval notation is as follows: "[" and "]" represent left and right <b>Inclusive</b> intervals, while "(" and ")" represent <b>Exclusive</b> intervals. Brackets of both types can be mixed, giving half inclusive/exclusive intervals.
+				</li>
+				<li>
+					Once the new critera are set, click "Calculate" to re-calculate all the grades (including "Overall"). Click "Defaults" to reset the plan criteria to their defaults.
+				</li>
+				<li>
+					You can change the criteria of one grade, and re-calculate, while viewing another grade. This lets you see changes to "Overall" upon changing individual grade criteria.
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

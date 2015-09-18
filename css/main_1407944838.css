@@ -1,0 +1,489 @@
+/* ---------------------- Filters ------------------------- */
+
+body {
+	background-color: #e6e6e6;
+	text-rendering: geometricPrecision;
+}
+
+/* Div containing report text and plots */
+#report_content {
+	font-family: "helvetica","arial","tahoma","verdana","sans-serif";
+	line-height: 150%;
+	text-indent: 30px;
+}
+
+#report_content .dlButton {
+	text-indent: 0;
+	margin: 20px;
+}
+
+/* Div containing map and plots on main page */
+#content{
+	background-color:#fff;
+	width:900px;
+	padding:10px;	
+}
+
+/* Links to  Urban */
+#footer {
+	width: 900px;
+	text-align: center;
+	font-size: .7em;
+	padding: 1em 0 1em 0;
+	border-top: solid 1px #d7d7d7;
+	margin-top: 24px;
+}
+
+#introText {
+	font-family: "verdana", "helvetica", "sans-serif";
+	font-size: 13px;
+	text-align: left;
+	width: 553px;	
+}
+
+#introLinks, #introLinks li ul {
+	display: inline-block; 
+	vertical-align: top;
+	font-size: 12px;	
+}
+
+#introLinks li, #introLinks li ul li {
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+#introLinks li a:hover, #mainHeader:hover, #table_of_contents li a:hover {
+	opacity: .7;
+}
+
+h1 {
+	font-size: 15px;
+}
+
+h2 {
+	margin-top: 50px;
+	font-size: 20px;
+	text-indent: 0;
+}
+
+h3 {
+	font-size: 18px;
+	font-style: italic;
+	text-indent: 0;	
+}
+
+h1, #introLinks li a, #mainHeader a, h2, h3, #table_of_contents li a, #table_of_contents, p a {
+	text-decoration: none;	
+	font-family: "helvetica","arial","tahoma","verdana","sans-serif";
+	color: #47a;
+	margin-bottom: 1px;
+}
+
+#contents_subtable li {
+	font-style: italic;
+	font-size: 14px;
+}
+
+p.first {
+	text-indent: 0;
+}
+
+ul.gradelist li, ol li {
+	margin-bottom: 5px;
+}
+
+#mainHeader {
+	font-size: 25px;
+}
+
+#natChartHeader {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px;
+	font-family: "helvetica","arial","tahoma","verdana","sans-serif";
+}
+
+.italics{
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-family: "helvetica","arial","tahoma","verdana","sans-serif";
+	font-size: 10px;
+}
+
+.buttons {
+	white-space: normal;
+	text-align: center;
+}
+
+.button span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;      
+}
+
+.buttons, .dlButton, .tableButtons {
+	background-color:#ededed;
+	border:1px solid #b8b8b8;
+	display:inline-block;
+	color:#666666;
+	font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+	font-size:11px;
+	font-weight:normal;
+	padding:4px 6px;
+	text-decoration:none;
+	margin-bottom: 0px;
+}.buttons:hover, .selected, .tableButtons:hover, .tableSelected, .dlButton:hover {
+	background-color:#ffffff;
+	cursor: pointer;
+	color:#000000;
+
+}.buttons:active, .dlButton:active, tableButtons:active {
+	position:relative;
+}
+
+
+/* ---------------------- Map and Graph section ------------------------- */
+
+.left{ float: left; }
+.right{ float: right; }
+.clear{ clear: both; }
+.clearLeft{ clear: left; }
+
+#mapGraphMain{
+	margin: 25px 0px 10px 0px;
+	width: 900px;
+}
+
+#mapHolder{
+	width: 445px;	
+}
+
+#graphHolder{
+	margin-left: 10px;
+	width: 445px;
+	font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+
+}
+
+#filterLegend{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#displayFilter {
+	margin-bottom:10px;
+}
+
+.fL{
+	height: 50px;
+	width: 150px;
+	padding: 5px;	
+}
+
+
+#legend{
+	padding-left: 20px;	
+}
+
+#stateSelect{
+	width: 150px;	
+}
+
+#dropDownExp{
+	padding-left: 10px;		
+	font-size: 13px;
+	font-style: italic;	
+	margin-bottom: 5px;
+}
+
+
+.appFilters{
+	font-style: italic;
+	font-size: 14px;	
+}
+
+.keyLabel{
+	margin: 0px;
+	font-family: "helvetica","arial","tahoma","verdana","sans-serif";
+	font-size: 11px;
+	font-weight:bold;
+	vertical-align:top;
+}
+
+#gradeCriteria, #planGrades{
+	margin: 0px;	
+}
+
+/* ------------------- State Table ------------------- */
+
+
+
+#plan_design_div {
+	padding-bottom: 5px;
+}
+
+.plan_design_select {
+	margin-right: 5px;
+}
+
+#grade_table_buttons {
+	padding-left: 30px;
+}
+
+#stateTableDiv{
+	display: none;	
+}
+
+#load_more {
+	text-align: center;
+	font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+}
+
+
+#load_more_button {
+	margin: 15px;
+}
+
+#stateTable, #stateTableHeader{
+	border-collapse:collapse;	
+	table-layout: fixed;
+	width: 870px;
+	font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+}
+
+#tableState{
+	font-weight: bold;	
+
+}
+
+#plan_rankings {
+	height: 80px;
+}
+
+#stateHeader span#sort_instructions {
+	font-weight: none;
+	font-style: italic;
+	font-size: 12px;
+}
+
+span.highlight_span {
+	display: block;
+	padding: 2px;
+}
+
+span.highlight_span.highlighted {
+	background-color: #cccccc;
+}
+
+.rankings_title_col {
+	width: 200px;
+}
+
+.stateColHeader{
+	font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+	text-align: center;	
+	font-size: 11px;
+	vertical-align: bottom;
+}
+
+.col_header_text {
+	padding-right: 3px;
+	padding-left: 3px; 
+}
+
+.hover_col_header:hover, .selected_header, .pd_selected {
+	background-color: #ccc;
+	cursor: pointer;	
+}
+
+.occupation_button_row {
+	vertical-align: bottom;
+	padding-left: 20px;
+}
+
+.occ_button {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.stateData{
+	font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+	font-size: 12px;
+	text-align: center;	
+	padding: 3px 0px 3px 0px;
+}
+
+.stateOcc{
+	font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+	font-style: italic;
+	font-weight: bold;	
+	vertical-align:bottom;	
+}
+
+.dataFirstCol{
+	font-weight: bold;
+	text-align: left;
+}
+
+.sectionHeader, .dataRow{
+	font-size: 14px;	
+}
+
+.sectionHeader td, #stateHeader td{ 
+	border-bottom: 1px solid black; 
+	padding: 8px 0px 3px 0px; 
+	margin-top: 5px;
+}
+
+.imgMargin{
+	margin-right: 3px;	
+}
+
+.dataRow{
+	cursor: pointer;	
+}
+
+.dataRow:hover{
+	background-color: #ccc;	
+}
+
+.textPart{
+	font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+	padding: 10px 10px 10px 10px;
+	font-size: 12px;	
+	vertical-align: top;
+}
+
+.textPartOne, .textPartTwo{
+	border-left: 1.25px dotted #CCCCCC;
+	border-right: 1.25px dotted #CCCCCC;	
+	border-collapse: collapse;	
+}
+
+.textRow{
+	display: none;	
+}
+
+#tableButtons{
+	margin: 5px 0px 5px 0px;	
+}
+
+/* ------------------ National Table ------------------- */
+
+
+
+#nationalTableDiv{
+	margin-top: 20px;	
+}
+
+.chartLabel{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	font-family: "helvetica","arial","tahoma","verdana","sans-serif";
+	font-size: 11px;
+	font-weight:bold;
+	vertical-align:top;
+}
+
+/* -------------------- Grades ------------------------ */
+
+.grade_cell {
+	text-align: center;
+	width: 87px;
+}
+
+.grade_div {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 20px;
+	height: 35px;
+	width: 73px;
+	line-height: 36px;
+	margin: 0 7px;
+}
+
+.grade_div.N {
+	padding-top: 6px;
+	font-size: 10px;
+	height: 30px;
+	line-height: 12px;	
+	background-color: #555555;
+	color:white;
+}
+
+.grade_div.A {
+	background-color:#6699CC;
+	color: white;
+}
+
+.grade_div.B {
+	background-color:#D1DCEE;
+	color: black;
+}
+
+.grade_div.C {
+	background-color:#ECD7C2;
+	color: black;
+}
+
+.grade_div.D {
+	background-color:#F9A458;
+	color: black;
+}
+
+.grade_div.F {
+	background-color:#A02022;
+	color: white;
+}
+
+/* --------------------------------- */
+
+/**
+ * Scrolling shadows by @kizmarh and @leaverou
+ * Only works in browsers supporting background-attachment: local; & CSS gradients
+ * Degrades gracefully
+ */
+
+.scrollable {
+	overflow-y: scroll;
+	overflow-x: visible;
+	height: 600px;
+
+	background:
+		/* Shadow covers */
+		linear-gradient(white 30%, rgba(255,255,255,0)),
+		linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+		
+		/* Shadows */
+		radial-gradient(50% 0, farthest-side, rgba(0,0,0,.4), rgba(0,0,0,0)),
+		radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.4), rgba(0,0,0,0)) 0 100%;
+	background:
+		/* Shadow covers */
+		linear-gradient(white 30%, rgba(255,255,255,0)),
+		linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+		
+		/* Shadows */
+		radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.4), rgba(0,0,0,0)),
+		radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.4), rgba(0,0,0,0)) 0 100%;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+	
+	/* Opera doesn't support this in the shorthand */
+	background-attachment: local, local, scroll, scroll;
+}
+
+#figure_1, #figure_2 {
+	line-height: 100%;
+	text-indent: 0;	
+	padding:0;
+	margin:auto;
+	border:none;
+	width:700px;
+}
+
+.fig_notes {
+	padding-left:40px;
+	font-size: 12px;
+	font-style: italic;
+}

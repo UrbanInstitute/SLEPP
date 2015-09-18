@@ -1,0 +1,108 @@
+/*
+	Style for grading tool
+*/
+
+.hidden_start {
+	display: none;
+}
+
+
+body {
+    font-family:"helvetica","arial","tahoma","verdana","sans-serif";
+    color: #555;
+}
+	ol li {list-style-type:upper-alpha}
+	ul li {margin-bottom: 10px;}
+
+h4#control_title {
+	margin:0;
+	padding:0;
+	padding-left:5px;
+	text-align: center;
+}
+#main {
+	width:900px;
+}
+#chart {
+	width:700px;
+	height:400px;
+}
+#grade_controls {
+	display:block;
+	overflow-y:scroll;
+	height:400px;
+	width:181px;
+}	
+#note_div {
+	font-style: italic;
+	width: 600px;
+	font-size: .8em;
+}
+
+#main,
+#grade_controls, 
+#dist_select,
+.button {
+border: solid #888;
+border-width: 2px 2px 2px 2px;    
+border-radius:5px;	   		
+}
+
+.button {
+text-align:center;
+background: #aaa;
+color:#fff;
+font-size: 15px;
+}	   		
+
+.form_container {
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.form_header,
+.button:hover {
+	text-align:center;
+background: #ddd;
+color:#999;
+cursor: pointer; 
+cursor: hand;  	   			
+}
+
+.form_header:hover {
+	opacity:.8;
+}
+
+.selected_button {
+background: #fff;
+color:#555;	   			
+}
+
+.grade_parameter_input, 
+.calculate_button {
+	width:70px;
+}
+
+.calculate_button {
+	display: block;
+	margin-top: 5px;
+}
+
+.weight_input,
+.param_reset_button {
+	width: 50px;
+}
+
+.dist_select_button, .chart_number_select, .num_format {
+	margin-right: 5px;
+	padding:0 3px;
+}
+
+.all_chart_container {
+	width:175px;
+	height:160px;
+}
+
+.header_row {
+	font-size: .8em;
+}

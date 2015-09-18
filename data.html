@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+        <!-- Vendor Libraries -->
+        <script type="text/javascript" src="./js/vendor/jquery-1.11.0.min.js"></script>        
+        <script type="text/javascript" src="./js/vendor/jquery-ui-1.10.4/ui/jquery-ui.js"></script>
+        <script src="js/vendor/jquery.event.drag-2.2.js"></script>
+        <script src="js/vendor/SlickGrid-master/slick.core.js"></script>
+        <script src="js/vendor/SlickGrid-master/slick.grid.js"></script>
+        <script src="js/vendor/SlickGrid-master/slick.dataview.js"></script>
+        <script src="js/vendor/SlickGrid-master/plugins/slick.autotooltips.js"></script>
+        <!-- Urban Scripts -->
+        <script src="js/database_1407944838.js"></script>
+        <!-- Style -->
+        <link rel="stylesheet" href="js/vendor/jquery-ui-1.10.4/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="js/vendor/SlickGrid-master/slick.grid.css">
+        <link rel="stylesheet" href="css/table_1407944838.css">
+        <link rel="stylesheet" href="css/main_1407944838.css" />
+    </head>
+    <body> 
+        <div id="content">
+            <a href="http://www.urban.org/retirement_policy/" target="_self"><img id="header" src="img/pensionsHeader.jpg" style="margin:-10px; margin-bottom:10px;"/></a>
+            <h1 id="mainHeader"><a href="index.html">The State of Retirement: Grading America's Public Pension Plans</a> </h1>
+            <h2 style="margin-top:20px;">
+                Urban Institute's State and Local Employee Pension Plan Database
+            </h2>
+            <p>
+                The table below displays benefit rules for the state-administered plans in our database. Click a column header to sort the database. Click on a pension plan's "Plan ID" to view the simulation and grading results for that plan. Use the text box to search and filter the database using keywords. Click on values in the "Additional Details on Early Retirement Penalties" to see detailed benefit reduction rules.
+            </p>
+            <div id="plan_search">
+                <span class="buttons"> <a href="SLEPP_database.zip"> Download Database </a> </span> 
+                &nbsp;Search Plans: <input type=text id="txtSearch" placeholder='e.g. "alaska police FAS" or "MA03"' style="width:250px;">
+            </div>
+            <div id="myGrid"></div>
+        </div>
+        <div id="footer">
+            <div id="cs_control_864" class="cs_control CS_Element_LinkBar">
+                <span class="CS_LinkBar_Item">© 2014 Urban Institute | 2100 M St NW | Washington, DC</span>
+                <span class="CS_LinkBar_Separator">&nbsp;|&nbsp;</span>
+                <a href="http://www.urban.org/about/contact.cfm" class="CS_LinkBar_Item">Contact Us</a>
+                <span class="CS_LinkBar_Separator">&nbsp;|&nbsp;</span>
+                <a href="http://www.urban.org/about/privacy.cfm" class="CS_LinkBar_Item">Privacy Policy</a>
+                <span class="CS_LinkBar_Separator">&nbsp;|&nbsp;</span>
+                <a href="http://www.urban.org/about/careers/index.cfm" class="CS_LinkBar_Item" >Careers</a>
+            </div>
+        </div>
+
+        <div id="ret_details_modal">
+            <div id="ret_details_grid"></div>
+        </div>
+
+        <!-- Google Analytics tracking code -->
+    	<script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-392952-4']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+    </body>
+    
+</html>
